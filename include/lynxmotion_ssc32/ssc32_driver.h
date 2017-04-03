@@ -19,6 +19,7 @@ struct Joint
 	struct JointProperties
 	{
 		int channel;
+		int pulse_offset;
 		double min_angle;
 		double max_angle;
 		double offset_angle; // this angle is considered to be 1500 uS

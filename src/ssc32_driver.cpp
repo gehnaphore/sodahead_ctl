@@ -56,6 +56,7 @@ SSC32Driver::SSC32Driver( ros::NodeHandle &nh ) :
 			priv_nh.param<double>( joint_graph_name + "default_angle", joint->properties.default_angle, joint->properties.offset_angle );
 			priv_nh.param<bool>( joint_graph_name + "initialize", joint->properties.initialize, true );
 			priv_nh.param<bool>( joint_graph_name + "invert", joint->properties.invert, false );
+			priv_nh.param<int>( joint_graph_name + "pulse_offset", joint->properties.pulse_offset, 0 );
 
 			// Make sure no two joints have the same channel
 			ROS_ASSERT( channels[joint->properties.channel] == NULL );
@@ -234,6 +235,8 @@ bool SSC32Driver::init( )
 					else if( cmd[j].pw > 2500 )
 						cmd[j].pw = 2500;
 				}
+			
+				ssc32_dev.pulse_offset(joint->properties.channel, joint->properties.pulse_offset);
 			}
 
 			// Send command
