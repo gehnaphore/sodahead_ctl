@@ -3,7 +3,7 @@
 
 int main( int argc, char** argv )
 {
-	ros::init( argc, argv, "ssc32_node" );
+	ros::init( argc, argv, "sodahead_node" );
 	ros::NodeHandle nh;
 
 	lynxmotion_ssc32::SSC32Driver ssc32( nh );

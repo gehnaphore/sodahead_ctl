@@ -1,0 +1,7 @@
+int32 channel
+int32 minPulseWidth
+float64 minRadians
+int32 maxPulseWidth
+float64 maxRadians
+---
+int32 errorCode

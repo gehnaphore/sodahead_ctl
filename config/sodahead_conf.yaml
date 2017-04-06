@@ -1,0 +1,15 @@
+baud: 115200
+port: /dev/ttyACM0
+controllers: {
+  head_controller: {
+    type: joint_controller,
+    joints: [head_pan_joint, head_tilt_joint],
+    publish_joint_states: true,
+    publish_rate: 20
+  }
+}
+
+joints: {
+  head_pan_joint: {channel: 0, max_angle: 1.57, min_angle: -1.57, offset_angle: 0.0, default_angle: 0.0, initialize: true, invert: true, pulse_offset: -70},
+  head_tilt_joint: {channel: 1, max_angle: 1.57, min_angle: -1.57, offset_angle: 0.0, default_angle: 0.0, initialize: true, invert: false, pulse_offset: -85}
+}
