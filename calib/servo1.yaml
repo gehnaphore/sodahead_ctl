@@ -1,7 +1,7 @@
 minPulseWidth: 950
 maxPulseWidth: 1880
-minRadians: -0.45
-maxRadians: 1.17
+minRadians: -0.541051875 # -0.523599
+maxRadians: 1.492255977
 forwardPoints:
   - [950, 17875]
   - [1009, 17239]
