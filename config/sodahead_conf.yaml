@@ -1,5 +1,5 @@
 baud: 115200
-port: /dev/ttyACM0
+port: /dev/sodabot/head
 controllers: {
   head_controller: {
     type: joint_controller,
